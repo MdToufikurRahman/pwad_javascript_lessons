@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Form Validation</h3>
+
+
+    <form action="" name="frm_validate" onsubmit="return formValidation()">
+         Name: <br>
+        <input type="text" name="fullname" placeholder="Enter your name"><br>
+
+         E-mail: <br>
+        <input type="email" name="email" placeholder="E-mail address"><br>
+
+         Phone: <br>
+        <input type="number" name="phone" placeholder="Enter your number"><br>
+
+          Address: <br>
+        <textarea name="address" id="" placeholder="Enter address"></textarea><br>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+
+    <script>
+        function formValidation(){
+            let fullname = document.frm_validate.fullname.value;
+            let email = document.frm_validate.email.value;
+            let phone = document.frm_validate.phone.value;
+            let address = document.frm_validate.address.value;
+
+
+            if(fullname ==""){
+                alert("Name can't be blank");
+                return false;
+            }
+
+             if(email ==""){
+                alert("email can't be blank");
+                return false;
+            }
+
+             if(phone ==""){
+                alert("phone can't be blank");
+                return false;
+            }
+
+             if(address ==""){
+                alert("address can't be blank");
+                return false;
+            }
+
+            alert("All data validated");
+            return true;
+           
+        }
+
+        // formValidation()
+    </script>
+</body>
+</html>
